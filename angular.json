@@ -47,12 +47,7 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "src/public"
-              }
-            ],
+            "assets": ["src/favicon.ico", "src/assets", "src/public"],
             "styles": ["src/styles.css"],
             "scripts": []
           },
@@ -61,13 +56,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ],
               "outputHashing": "all"
@@ -93,9 +88,15 @@
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
+          "builder": "@angular/build:extract-i18n",
+          "options": {
+            "buildTarget": "first-app:build"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "1b3c93df-f6dc-4279-8fee-93cc44fd3b15"
   }
 }

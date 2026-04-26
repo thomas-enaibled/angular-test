@@ -2,11 +2,10 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: ` Hello `,
-  styles: `
-    :host {
-      color: blue;
-    }
-  `,
+  imports: [],
+  template: ` <h1>Default</h1> `,
+  styleUrls: ['./app.css'],
 })
-export class App {}
+export class App {
+  title = 'default';
+}
